@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary &bull; JOIN</title>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/io.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/summary.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/summary.css">
+    
+    <!-- Favicon für helle und dunkle Themen -->
+    <link rel="icon" href="./assets/img/general/logo_blue.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./assets/img/general/logo_white.svg" media="(prefers-color-scheme: dark)">
+    
+    <link rel="preload" href="./assets\fonts\inter-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets\fonts\inter-v13-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body onload="init(false,fillCurrentData)">
+
+    <div id="website">
+        <div id="navigation"></div>
+        <div class="main-container">
+            <div id="header"></div>
+                <div class="content mobile-welcome-message">
+                    <div class="content-inside">
+                        <div class="title">
+                            <div><h1>Join 360</h1></div>
+                            <div class="summarySeparatorTitleBig"></div>
+                            <div class="summarySubtitle">Key Metrics at a Glance</div>
+                            <div class="summarySeparatorTitleSmall"></div>
+                        </div>
+                        <div class="summaryAndWelcomeMessage">
+                            <div class="summaryAlign flexgap">
+                                <div class="summaryCategory flexgap">
+                                    <div class="summary summaryBig summarySeparatorCategory summary-hover-top-right-bottom" onclick="location.href='board.html';">
+                                        <div class="summaryIcon summaryIconBoxTopLeft summaryIconBox"></div>
+                                        <div class="summaryIconBoxTopLeftDetails">
+                                            <div id="summaryTodoAmount" class="summaryAmount">0</div>
+                                            <div class="summaryText">To-Do</div>
+                                        </div>
+                                    </div>
+                                    <div class="summary summaryBig summary-hover-top-left-bottom" onclick="location.href='board.html';">
+                                        <div class="summaryIcon summaryIconBoxTopRight summaryIconBox"></div>
+                                        <div class="summaryIconBoxTopRightDetails">
+                                            <div id="summaryDoneAmount" class="summaryAmount">0</div>
+                                            <div class="summaryText">Done</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summaryCategory flexgap" onclick="location.href='board.html';">
+                                    <div class="summary summaryLarge summary-hover-top-bottom">
+                                        <div style="display: flex; align-items: center; justify-content: space-evenly; width:50%;">
+                                            <div class="summaryIcon summaryIconUrgent"></div>
+                                            <div class="summaryUrgentLeft">
+                                                <div id="summaryUrgent" class="summaryAmount">0</div>
+                                                <div class="summaryText">Urgent</div>
+                                            </div>
+                                        </div>
+                                        <div class="summaryUrgentSeparator"></div>
+                                        <div class="summaryUrgentRight">
+                                            <div id="summaryUrgentDate" class="summaryUrgentText">January 01, 1970</div>
+                                            <div class="summaryText">Upcoming Deadline</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summaryCategory flexgap">
+                                    <div class="summary summarySmall summarySeparatorCategory summary-hover-top-right-bottom" onclick="location.href='board.html';">
+                                        <div>
+                                            <div id="summaryTasksAmount" class="summaryAmount">0</div>
+                                            <div class="summaryText">Tasks in<br> Board</div>
+                                        </div>
+                                    </div>
+                                    <div class="summary summarySmall summary-hover-all-sides" onclick="location.href='board.html';">
+                                        <div>
+                                            <div id="summaryTasksProgress" class="summaryAmount">0</div>
+                                            <div class="summaryText">Tasks in<br>Progress</div>
+                                        </div>
+                                    </div>
+                                    <div class="summary summarySmall summary-hover-top-left-bottom" onclick="location.href='board.html';">
+                                        <div>
+                                            <div id="summaryAwaitFeedback" class="summaryAmount">0</div>
+                                            <div class="summaryText">Awaiting<br>Feedback</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div id="summaryWelcomeMessage"></div>
+                            </div>
+                        </div>
+                    </div>
+                <div id="footer"></div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN</title>
+    <!-- Favicon für helle und dunkle Themen -->
+    <link rel="icon" href="./assets/img/general/logo_blue.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./assets/img/general/logo_white.svg" media="(prefers-color-scheme: dark)">
+    
+    <link rel="preload" href="./assets\fonts\inter-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets\fonts\inter-v13-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/io.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/navigation.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src=""></script>
+</head>
+<body onload="animation(), checkChangeRememberMe()">
+    <div id="whiteB" class="whiteBackground"></div>
+        <div class="login-top">
+            <img class="login-logo" src="./assets\img\general/logo_blue.svg" alt="" srcset="">
+            <div class="login-main">
+                    <div class="empty-div"></div>
+                    <div class="login-right-top-corner">
+                    <p class="login-text">Not a Join user?</p>
+                    <button onclick="navigateToRegister()" class="signup-button bfill fbold">Sign up</button>
+                    </div>
+            </div>
+        </div>
+        <div class="login-content">
+            <div class="login-background">
+                <div class="login-header">
+                    <h1>Log in</h1>
+                    <div class="seperator"></div>
+                    <form class="form-contact" onsubmit="logIn(event)">
+                        <input id="input-email" class="input-login email-logo" type="email" name="Email" placeholder="Email" required oninput="tempStoreEmail()">
+                        <input id="input-password" class="input-login password-logo" type="password" name="Password" placeholder="Password" required>
+                        <div id="error-message" style="display: none; color: red;">Wrong password! Oops! Try again.</div>
+                        <div class="check-login">
+                            <input id="checkbox-login" class="checkbox-login" type="checkbox" value=false onchange="handleChangeRememberMe()"/>
+                            <label>Remember me</label>
+                        </div>
+                        <div class="container-login-btn">
+                            <button class="fbold bfill" type="submit">
+                                Log in                        
+                            </button>
+                            <button type="guest" onclick="logInGuest()">
+                                Guest Log in
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="login-responsive dnone">
+            <p class="login-text">Not a Join user?</p>
+            <button onclick="navigateToRegister()" class="signup-button bfill fbold">Sign up</button>
+        </div>
+        <div class="login-info">
+            <div class="login-container">
+                <p class="login-privacy" onclick="navigateToPrivacy()">Privacy Policy</p>
+            </div>
+            <div class="login-container">
+                <p class="login-legal" onclick="navigateToImprint()">Legal notice</p>
+            </div>
+        </div>
+</body>
+</html>

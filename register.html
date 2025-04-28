@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN</title>
+    <!-- Favicon für helle und dunkle Themen -->
+    <link rel="icon" href="./assets/img/general/logo_blue.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./assets/img/general/logo_white.svg" media="(prefers-color-scheme: dark)">
+    
+    <link rel="preload" href="./assets\fonts\inter-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets\fonts\inter-v13-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/io.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/navigation.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+<div class="register">
+    <div class="register-top">
+        <div class="register-main">
+                <img class="register-logo" src="./assets\img\general/logo_blue.svg" alt="" srcset="">
+                <div class="register-right-top-corner"></div>
+        </div>
+    </div>
+    <div class="register-content">
+        <div class="register-background">
+        <div class="register-header">
+            <div class="header-content-register">
+                <img onclick="navigateToLogIn()" class="back-logo" src="./assets\img/icons/back.svg" alt="" srcset="">
+                <h1>Sign up</h1>
+            </div>
+            <div class="seperator"></div>
+            <form class="form-contact" onsubmit="checkRegister(event)">
+                <input id="input-firstname" class="input-register name-logo" type="text" name="Firstname" placeholder="First name" required>
+                <input id="input-lastname" class="input-register name-logo" type="text" name="Lastname" placeholder="Last name" required>
+                <input id="input-email" class="input-register email-logo" type="email" name="Email" placeholder="Email" required oninput="tempStoreEmail()">
+                <input id="input-password" class="input-register password-logo" type="password" name="Password" placeholder="Password" required>
+                <input id ="input-repassword" class="input-register repassword-logo" type="password" name="RePassword" placeholder="Confirm Password" required>
+                <div id="password-error-message" style="display: none; color: red;">Ups! Your passwords don't match.</div>
+                <div class="check-register"><input id="checkboxRegister" class="checkbox-register" type="checkbox" value="test"/>
+                    <label>
+                        <span id="defaultText">I accept the</span>
+                        <span id="privacyLink" class="check-text" onclick="privacyWindow()">Privacy policy</span>
+                        <span id="warningText" style="display: none; color: #ff0000bd;;">Please accept the <span class="check-text" onclick="privacyWindow()">Privacy policy</span></span>
+                    </label>
+                </div>
+                <!-- <div id="checkbox-error-message" style="display: none; color: red;">Please accept the Privacy policy.</div> -->
+                <div class="container-register-btn">
+                    <button class="bfill fbold" type="signup">Sign up</button>
+                </div>
+              </form>
+              <div id="infoPopup" class="info-popup">
+                <p id="infoPopupText">Info Popup Text</p>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+    <div class="register-info">
+        <div class="register-container">
+            <p class="register-privacy" onclick="navigateToPrivacy()">Privacy Policy</p>
+        </div>
+        <div class="register-container">
+            <p class="register-legal" onclick="navigateToImprint()">Legal notice</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,367 @@
+body {
+    visibility: visible !important;
+    overflow-y: auto;
+}
+
+/* Register TOP */
+.register-main {
+    display: flex;
+    justify-content: space-around;
+    gap: 35%;
+    margin-bottom: 75px;
+    margin-top: 80px;
+}
+
+.register-logo {
+    height: 100px;
+    width: 100px;
+    /* position: relative;
+    left: 245px; */
+}
+
+.register-right-top-corner {
+    padding: 0px 120px;
+  }
+
+
+/* Buttons */
+
+.container-register-btn {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+
+/* Register content */
+.register-content {
+    display: flex;
+    justify-content: center;
+}
+
+.register-background {
+    background-color: var(--secondary-color);
+    padding: 0px 80px;
+    padding-bottom: 30px;
+    padding-top: 70px;
+    box-shadow: 0px 0px 16px -8px var(--icon-color);
+    border-radius: 28px;
+}
+
+.register-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -30px;
+}
+
+.header-content-register {
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.back-logo {
+    position: relative;
+    right: 100px;
+}
+
+.back-logo:hover {
+    cursor: pointer;
+}
+
+.seperator {
+    border-top: 3px solid var(--highlight-color);
+    width: 140px;
+}
+
+.register-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+.register-info p {
+    color: var(--icon-color);
+    margin: 0;
+}
+
+.register-container {
+    width: 110px;
+    text-align: center;
+}
+
+.register-privacy, .register-legal {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
+    cursor: pointer;
+    transform-origin: center center;
+}
+
+.register-privacy:hover, .register-legal:hover {
+    transform: scale(1.01);
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+
+/* Form */
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 36px;
+    width: 370px;
+}
+
+.input-register {
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid var(--line-color);
+    display: flex;
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+
+.input-register:focus {
+    border: 2px solid var(--highlight-color)
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
+#password-error-message {
+    font-size: 11px;
+    position: absolute;
+    bottom: 105px;
+    left: 10px;
+    opacity: 0.7;
+}
+
+#checkbox-error-message {
+    font-size: 11px;
+    position: absolute;
+    bottom: 60px;
+    left: 100px;
+    opacity: 0.7;
+}
+
+::placeholder {
+    color: var(--line-color);
+    padding: 10px 0px;
+}
+
+.name-logo {
+    background: url(../assets/img/icons/person.svg) no-repeat 330px 10px;
+}
+
+.email-logo {
+    background: url(../assets/img/icons/mail.svg) no-repeat 328px 10px;
+}
+
+.password-logo {
+    background: url(../assets/img/icons/lock.svg) no-repeat 326px 5px;
+}
+
+.repassword-logo {
+    background: url(../assets/img/icons/lock.svg) no-repeat 326px 5px;
+}
+
+.check-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.checkbox-register {
+    max-width: 16px;
+}
+
+label {
+    display: contents;
+    font-size: 14px;
+    color: var(--icon-color);
+}
+
+.check-text {
+    margin: 0;
+    color: var(--highlight-color);
+    cursor: pointer;
+    width: 100px;
+}
+
+.check-text:hover {
+    text-decoration: underline;
+    transform: scale(1.01);
+    font-weight: 600;
+}
+
+#warningText {
+    width: 220px;
+}
+
+/* Modal-Stil */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Modal-Inhalt */
+  .modal-content {
+    background-color: var(--background-color);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* scrollbar-width: none; */
+    border-radius: 30px;
+  }
+  
+  /* Für Webkit-Browser wie Chrome und Safari */
+  .modal-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  
+@media screen and (max-width: 600px) {
+    .register-main {
+        gap: 25%;
+        margin-bottom: 50px;
+        margin-top: 40px;
+    }
+
+    .register-background {
+        width: 50%;
+    }
+
+    .register-right-top-corner {
+        padding: 0px 60px;
+    }
+
+    .back-logo {
+        right: 60px;
+    }
+
+    .seperator {
+        width: 160px;
+    }
+
+    .form-contact {
+        width: 320px;
+    }
+
+    .name-logo {
+        background: url(../assets/img/icons/person.svg) no-repeat 280px 10px;
+    }
+
+    .email-logo {
+        background: url(../assets/img/icons/mail.svg) no-repeat 278px 10px;
+    }
+
+    .password-logo {
+        background: url(../assets/img/icons/lock.svg) no-repeat 276px 5px;
+    }
+
+    .repassword-logo {
+        background: url(../assets/img/icons/lock.svg) no-repeat 276px 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .register-main {
+        margin-bottom: 24px;
+        margin-top: 24px;
+    }
+
+    #password-error-message {
+        left: -20px;
+    }
+
+    .register-logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .register-right-top-corner {
+        padding: 0px 60px;
+    }
+
+    .register-background {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
+    .register-info {
+        margin-top: 40px;
+    }
+
+    .seperator {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .register-background {
+        width: 35%;
+        padding-bottom: 10px;
+    }
+
+    .register-right-top-corner {
+        padding: 0px 10px;
+    }
+
+    .back-logo {
+        right: 30px;
+    }
+
+    .seperator {
+        width: 80px;
+    }
+
+    .form-contact {
+        width: 220px;
+    }
+
+    .name-logo {
+        background: url(../assets/img/icons/person.svg) no-repeat 180px 10px;
+    }
+
+    .email-logo {
+        background: url(../assets/img/icons/mail.svg) no-repeat 178px 10px;
+    }
+
+    .password-logo {
+        background: url(../assets/img/icons/lock.svg) no-repeat 176px 5px;
+    }
+
+    .repassword-logo {
+        background: url(../assets/img/icons/lock.svg) no-repeat 176px 5px;
+    }
+
+    #password-error-message {
+        left: -40px;
+        width: 200px;
+    }
+
+    .modal-content {
+        width: 77%;
+    }
+}

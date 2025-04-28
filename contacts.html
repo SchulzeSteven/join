@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts &bull; JOIN</title>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/io.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/contact.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    
+    <!-- Favicon für helle und dunkle Themen -->
+    <link rel="icon" href="./assets/img/general/logo_blue.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./assets/img/general/logo_white.svg" media="(prefers-color-scheme: dark)">
+    
+    <link rel="preload" href="./assets\fonts\inter-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets\fonts\inter-v13-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+
+<body onload="init(false,renderContacts)">
+
+    <div id="website">
+        <div id="navigation"></div>
+        <div class="main-container">
+            <div id="header"></div>
+            <div id="contact-dialog"></div>
+            <div class="contacts-content">
+                <div class="contact-aside">
+                    <div class="btn-container">
+                        <button onclick="addNewForm(1)" class="bfill contact-list-btn">
+                            <span>Add new contact</span> 
+                            <img src="./assets/img/icons/person_add.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="contact-list-container">
+                        <div id="contact-list"></div>
+                    </div>
+                </div>
+                <div class="contact-main">
+                    <div class="contacts-text">
+                        <h1>Contacts</h1>
+                        <div class="contacts-text-line"></div>
+                        <h5>Better with a team</h5>
+                    </div>
+                    <div id="contact-info" class="contact-main-info-container"> 
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="footer"></div>
+        </div>
+    </div>
+    <div id="infoPopup" class="info-popup fbold">
+        <p id="infoPopupText">Info Popup Text</p>
+    </div>
+</body>
+</html>
+

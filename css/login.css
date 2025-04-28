@@ -1,0 +1,371 @@
+body {
+    overflow: visible;
+}
+
+.whiteBackground{
+    position: absolute;
+    background: var(--background-color);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    animation: moveWhiteB 1s forwards;
+    animation-delay: 0.5s;
+    z-index: 1;
+}
+
+@keyframes moveWhiteB {
+    from {
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+    }
+    to {
+        opacity: 0; 
+    }
+  }
+
+.login-logo {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    animation: moveImage 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes moveImage {
+  from {
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 350px;
+  }
+  to {
+    left: 20%;
+    top: 12%;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Login TOP */
+
+.empty-div {
+    padding: 25px 50px;
+}
+
+.login-main {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    margin-bottom: 160px;
+    margin-top: 80px;
+    gap: 12%;
+}
+
+.login-right-top-corner {
+    gap: 16px;
+    height: fit-content;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-text:hover {
+    cursor: context-menu;
+}
+
+
+/* Buttons */
+
+.container-login-btn {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+/* Login content */
+.login-content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 240px;
+}
+
+.login-background {
+    background-color: var(--secondary-color);
+    padding: 0px 80px;
+    padding-bottom: 30px;
+    padding-top: 70px;
+    box-shadow: 0px 0px 16px -8px var(--icon-color);
+    border-radius: 28px;
+}
+
+.login-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -30px;
+}
+
+.login-header h1 {
+    cursor: default;
+}
+
+.seperator {
+    border-top: 3px solid var(--highlight-color);
+    width: 140px;
+}
+
+.login-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.login-info p {
+    color: var(--icon-color);
+    margin: 0;
+}
+
+.login-container {
+    width: 110px;
+    text-align: center;
+}
+
+.login-privacy, .login-legal {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
+    cursor: pointer;
+    transform-origin: center center;
+}
+
+.login-privacy:hover, .login-legal:hover {
+    transform: scale(1.01);
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+
+/* Form */
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 36px;
+    width: 370px;
+    gap: 24px;
+}
+
+.input-login {
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid var(--line-color);
+    display: flex;
+    border-radius: 8px;
+}
+
+#error-message {
+    font-size: 11px;
+    position: absolute;
+    top: 225px;
+    left: 10px;
+    opacity: 0.7;
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
+.input-login:focus {
+    border: 2px solid var(--highlight-color)
+}
+
+::placeholder {
+    color: rgb(208 208 208);
+    padding: 10px 0px;
+}
+
+.email-logo {
+    background: url(../assets/img/icons/mail.svg) no-repeat 328px 10px;
+}
+
+.password-logo {
+    background: url(../assets/img/icons/lock.svg) no-repeat 326px 5px;
+}
+
+.check-login {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 38px;
+}
+
+.checkbox-login {
+    max-width: 16px;
+}
+
+label {
+    font-size: 14px;
+    color: var(--icon-color);
+}
+
+/*----------------------------Responsive-------------------------- */
+
+@media screen and (max-width: 940px) {
+    #error-message {
+        top: 210px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .login-main {
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #error-message {
+        top: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form-contact {
+        width: 300px;
+    }
+
+    .login-background {
+        padding: 0px 40px;
+        padding-bottom: 30px;
+        padding-top: 70px;
+    }
+
+    .email-logo {
+        background: url(../assets/img/icons/mail.svg) no-repeat 258px 10px;
+    }
+
+    .password-logo {
+        background: url(../assets/img/icons/lock.svg) no-repeat 256px 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    button {
+        font-size: 16px;
+        width: 50%;
+    }
+
+    .container-login-btn {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .login-right-top-corner {
+        display: none;
+    }
+
+    .check-login {
+        margin-left: 10px;
+    }
+
+    .login-content {
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    .login-main {
+        margin-left: 50px;
+        justify-content: unset;
+        margin-bottom: 40px;
+        margin-top: 25px;
+    }
+
+    .login-logo {
+        width: 250px;
+        height: 250px;
+        transform: translate(-50%, -80%);
+    }
+
+    .login-background {
+        padding: 0px 40px;
+        padding-bottom: 0px;
+        padding-top: 50px;
+    }
+
+    .login-responsive {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+    .login-responsive button {
+        width: 25%;
+    }
+
+    .login-info {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        gap: 0;
+    }
+
+    @keyframes moveWhiteB {
+        from {
+            width: 100%;
+            height: 90vh;
+            opacity: 1;
+        }
+        to {
+            opacity: 0; 
+        }
+      }
+
+    @keyframes moveImage {
+        from {
+            transform: translate(-50%, -80%);
+            width: 250px;
+            height: 250px;
+        }
+        to {
+            left: 70px;
+            top: 100px;
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .login-main {
+        margin-left: 24px;
+    }
+
+    .login-background {
+        padding: 0px 16px;
+        padding-bottom: 0px;
+        padding-top: 50px;
+    }
+
+    .form-contact {
+        width: 260px;
+    }
+
+    .email-logo {
+        background: url(../assets/img/icons/mail.svg) no-repeat 218px 10px;
+    }
+
+    .password-logo {
+        background: url(../assets/img/icons/lock.svg) no-repeat 216px 5px;
+    }
+
+    .login-responsive button {
+        width: 32%;
+    }
+}

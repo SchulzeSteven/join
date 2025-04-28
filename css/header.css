@@ -1,0 +1,126 @@
+#header {
+    background-color: var(--secondary-color);
+    height: 96px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    box-shadow: 0 3px 4px rgba(182, 182, 182, 0.75);
+    z-index: 5;
+}
+
+#header div {
+    display: flex;
+}
+
+#header img {
+    cursor: pointer;
+}
+
+.headerTitle {
+    display: flex;
+    white-space: nowrap;
+    padding: 0 24px 0 100px;
+}
+
+.headerLogo {
+    display: none !important;
+}
+
+.headerHelpCircle {
+    display: flex;
+    align-items: center;
+}
+
+.headerHelpCircle img {
+    height: 24px;
+    width: auto;
+}
+
+.headerUserCircle {
+    background-color: var(--secondary-color);
+    color: var(--highlight-color);
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 50%;
+    margin: 0 40px 0 20px;
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerUserCircle:hover {
+    background-color: #E2E6EC;
+}
+
+@media screen and (max-width: 1440px) {
+    #header {
+    min-width: 300px;
+    padding-left: 0;
+    left: 0;
+    min-height: 96px;
+    }
+
+    .headerLogo img {
+        height: 60px;
+        width: auto;
+    }
+
+    .headerUserCircle {
+        height: 40px;
+        width: 40px;
+        margin-right: 16px;
+    }
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-color);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    right: 30px;
+    top: 96px;
+    padding: 0px 10px;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.dropdown-content a {
+    color: var(--disabled-color);
+    padding: 10px 32px;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: #2f3b5b;
+    margin: 0;
+    cursor: pointer;
+    transform: scale(1.02);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width: 1330px){
+    .headerTitle {
+        display: none !important;
+    }
+    
+    .headerLogo {
+        display: flex !important;
+        white-space: nowrap;
+        padding-left: 16px;
+    }
+}

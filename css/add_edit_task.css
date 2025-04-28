@@ -1,0 +1,626 @@
+.task-input{
+    padding: 8px 16px;
+    border: 2px solid var(--icon-color);
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    background-color: var(--secondary-color);
+}
+
+.task-input:focus{
+    border: 2px solid var(--highlight-color);
+}
+
+.wrapper-category {
+    position: relative;
+}
+
+.container-inputCategory {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.inputCategoryHidden {
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: relative;
+    top: -5px;
+}
+
+.inputCategoryHidden:focus-visible {
+    background-color: transparent;
+    border: none;
+}
+
+
+.container-categoryselector {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    height: 96px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    border: 2px solid var(--highlight-color);
+    box-shadow: 0 0 8px 4px var(--shadow-5-color);
+    margin-top: -10px;
+    padding-top: 16px;
+    gap: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+}
+
+.categoryselector-entry {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.categoryselector-entry h6 {
+    padding: 0;
+}
+
+.categoryselector-entry:hover {
+    background-color: var(--background-color);
+}
+
+.inputCategory {
+    height: 25px;
+    outline: none;
+    font-size: 20px;
+    flex: 1;
+}
+
+.container-headline {
+    display: flex;
+}
+
+.container-parameter-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 500px;
+}
+
+.container-parameter-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 500px;
+}
+
+.container-parameter-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.container-parameter-bottom h6{
+    padding: 0;
+    margin-right: 16px;
+}
+
+.task-data-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-form-upper-parts {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.container-parameter-part {
+    display: flex;
+    flex-direction: column;
+}
+.container-parameter-part h6 {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.task-separator {
+    height: 390px;          /* unschön aber so im Design */
+    width: 1px;
+    margin-left: 48px;
+    margin-right: 48px;
+    background-color: var(--icon-color);
+}
+
+.task-textarea {
+    border-radius: 8px;
+    border: 2px solid var(--icon-color);
+    height: 134px;
+    padding: 8px 16px;
+    font-size: 21px;
+    font-family: 'Inter', sans-serif;
+    resize: none;
+    outline: none;
+}
+
+.task-textarea:focus {
+    border: 2px solid var(--highlight-color);
+}
+
+/* buttons */
+.task-btns{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 16px 0 0 0;
+}
+  
+.prio-btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.btn-prio {
+    width:100%;
+    max-width: 120px;
+    min-width: 64px;
+    height: 36px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.btn-prio div {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-prio-low-default {
+    color: var(--primary-color);
+    background-color: var(--secondary-color)!important;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.btn-prio-low-default div{
+    background: url(../assets/img/task/prio_low.svg) no-repeat 0px 2px;
+}
+
+.btn-prio-low-selected {
+    background-color: var(--low-color)!important;
+}
+.btn-prio-low-selected h6 {
+    color: var(--secondary-color);
+}
+.btn-prio-low-selected div{
+    background: url(../assets/img/task/prio_low_white.svg) no-repeat 0px 2px;
+}
+
+.btn-prio-medium-default {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.btn-prio-medium-default div{
+    background: url(../assets/img/task/prio_medium.svg) no-repeat 0px 7px;
+}
+
+.btn-prio-medium-selected {
+    background-color: var(--medium-color);
+}
+.btn-prio-medium-selected h6{
+    color: var(--secondary-color);
+}
+.btn-prio-medium-selected div{
+    background: url(../assets/img/task/prio_medium_white.svg) no-repeat 0px 7px;
+}
+
+.btn-prio-urgent-default {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.btn-prio-urgent-default div{
+    background: url(../assets/img/task/prio_urgent.svg) no-repeat 0px 2px;
+}
+
+.btn-prio-urgent-selected {
+    color: var(--secondary-color);
+    background-color: var(--urgent-color);
+}
+.btn-prio-urgent-selected h6{
+    color: var(--secondary-color);
+}
+.btn-prio-urgent-selected div{
+    background: url(../assets/img/task/prio_urgent_white.svg) no-repeat 0px 2px;
+}
+
+.task-btns button{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.task-list-btn{
+    display: flex;
+    align-items:center;
+    gap: 16px;
+    padding: 15.5px 64.5px;
+    margin: 22.5px 0 0 0;
+}
+
+/* Subtask Images */
+.svg-subtask-add {
+    fill: var(--primary-color);
+    cursor: pointer;
+}
+
+.svg-subtask-check {
+    stroke: var(--primary-color);
+    cursor: pointer;
+}
+
+.svg-subtask-cancel {
+    stroke: var(--primary-color);
+    cursor: pointer;
+}
+
+.svg-subtask-edit {
+    stroke: var(--primary-color);
+    cursor: pointer;
+}
+
+.svg-subtask-delete {
+    stroke: var(--primary-color);
+    cursor: pointer;
+}
+
+.subTaskEntryListElement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    padding: 8px 16px;
+}
+
+.subTaskEntryListElement h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.subTaskEntryListElement:hover {
+    background-color: var(--disabled-color);
+
+    .svg-subtask-element-edit {
+        display: block;
+        cursor: pointer;
+    }
+
+    .svg-subtask-element-delete {
+        display: block;
+        cursor: pointer;
+    }
+
+    .SubTask-ElementSeparator {
+        display: block;
+    }
+
+    .inputSubTaskTitle {
+        background-color: var(--disabled-color);
+    }
+    
+}
+
+.subTaskEntryListElementInner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-subtask-element-edit {
+    stroke: var(--primary-color);
+    display: none;
+}
+
+.svg-subtask-element-delete {
+    stroke: var(--primary-color);
+    display: none;
+}
+
+.SubTask-ElementSeparator {
+    width: 1px;
+    height: 22px;
+    background-color: var(--icon-color);
+    display: none;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.separator-input-subtask {
+    width: 1px;
+    height: 30px;
+    background-color: var(--disabled-color);
+}
+
+.inputSubTaskTitle {
+    background-color: var(--background-color);
+    font-size: 16px;
+    margin-left: 8px;
+    border: none;
+    outline: none;
+}
+
+.input-subtask {
+    border: none;
+    font-size: 20px;
+    outline: none;
+    background-color: transparent;
+    width: -webkit-fill-available;
+    margin-right: 8px;
+}
+
+.left-input-area {
+    flex: 1;
+}
+
+.right-images-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.container-input-subtask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    border: 2px solid var(--icon-color);
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    background-color: var(--secondary-color);
+    height: 26px;
+}
+
+.container-input-subtask:focus {
+    border: 2px solid var(--highlight-color);
+}
+
+.container-input-subtask-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    height: 100px;      /* das fix spart uns ein position absolute */
+}
+
+.container-inputAssignTo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.wrapper-assign-to {
+    position: relative;
+}
+
+.imageArrow {
+    width: 27px;
+    height: 27px;
+    background-color: var(--secondary-color) !important; /* wird sonst vom background URL überschrieben */
+}
+.imageArrowFlipY {
+    transform: scaleY(-1);
+}
+
+.container-assignselector {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    height: 190px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    border: 2px solid var(--highlight-color);
+    box-shadow: 0 0 8px 4px var(--shadow-5-color);
+    margin-top: -10px;
+    padding-top: 8px;
+    gap: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+}
+
+.inputAssignTo {
+    height: 25px;
+    outline: none;
+    font-size: 20px;
+    flex: 1;
+}
+
+.assignselector-entry {
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+.assignselector-entry h6 {
+    padding: 0;
+}
+.assignselector-entry:hover {
+    background-color: var(--background-color);
+}
+.assignselector-entry-highlight {
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background-color: var(--primary-color);
+}
+.assignselector-entry-highlight h6 {
+    padding: 0;
+    color: var(--secondary-color);
+}
+.assignselector-entry-highlight:hover {
+    background-color: var(--primary-highlight-color);
+}
+
+.border-highlight {
+    border-color: var(--highlight-color);
+}
+
+.container-assigned-contact-circles {
+    display: flex;
+    position: relative;
+    bottom: 11px;
+    left: 10px;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.contactCircle {
+    /* background-color: rgb(212, 113, 189);     -> Background Color set from user entry   */ 
+    box-sizing: border-box;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--secondary-color);
+}
+
+.contactCircle h6 {
+    color: var(--secondary-color);
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .task-separator {
+        display: none;
+    }
+
+    .container-form-upper-parts {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 800px) and (min-width: 660px) {
+
+    .container-parameter-left {
+        width: unset;
+    }
+
+    .container-parameter-right {
+        width: unset;
+    }
+    
+}
+
+
+@media screen and (max-width: 660px) {
+
+    .previewTaskElementCategory {
+        padding: 8px 16px;
+    }
+
+    .content-inside {
+        width: 100%;
+    }
+
+    h6, .task-input, .inputAssignTo, .inputCategory, .input-subtask{
+        font-size: 14px;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        border-radius: 6px;
+    }
+
+    .task-btns {
+        gap: 8px;
+        margin: 0;
+    }
+
+    .task-textarea {
+        font-size: 14px;
+        height: 50px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 8px;
+        height: 36px;
+    }
+
+    .btn-prio {
+        height: 20px;
+        padding: 8px 8px;
+    }
+
+    .container-parameter-left, .container-parameter-right {
+        width: inherit;
+        gap: 8px;
+    }
+
+    .container-input-subtask {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .container-input-subtask-list {
+        height: 50px;
+    }
+
+    .container-headline {
+        padding: 0;
+    }
+
+    .addTaskTemplate  {
+        width: 300px;
+        padding: 16px;
+        border-radius: 32px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .addTaskTemplate  {
+        width: 280px;
+    }
+
+    .con {
+        padding: 16px 0px;
+    }
+
+    .prio-btns {
+        gap: 6px;
+    }
+
+    .btn-prio h6 {
+        display: none;
+    }
+}

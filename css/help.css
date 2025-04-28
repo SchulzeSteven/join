@@ -1,0 +1,45 @@
+.help {
+    align-items: unset !important;
+}
+
+ol {
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 0;
+    width: 80%;
+}
+ol li {
+    counter-increment: item;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+ol li::before {
+    content: counter(item) '.';
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    margin: 0;
+}
+
+.list {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.list h6 {
+    padding-bottom: 0px;
+}
+
+.list p {
+    margin: 0;
+}

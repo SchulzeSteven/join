@@ -1,0 +1,29 @@
+:root {
+    --highlight-color: #29ABE2;
+    --primary-color: #2A3647;
+    --secondary-color: #FFFFFF;
+    --background-color: #F6F7F8;
+    --primary-highlight-color: #091931;
+    --disabled-color: #CDCDCD;
+    --icon-color: #A8A8A8;
+    --error-color: #FF8190;
+    --line-color: #D1D1D1;
+
+    --urgent-color: #FF3D00;
+    --medium-color: #FFA800;
+    --low-color: #7AE229;
+
+    --shadow-5-color: rgba(0, 0, 0, 0.05);
+
+    --userstory-color: #0038ff;
+    --technicaltask-color: #1fd7c1;
+
+    --back-button: #eeeeee;
+
+    --progress-color: #4589ff;
+
+  } 
+
+  .highlight {
+    color: var(--highlight-color);
+  }
